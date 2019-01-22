@@ -1,0 +1,1 @@
+var contextPath = 'http://localhost:9090/wheel/';//项目访问路径
