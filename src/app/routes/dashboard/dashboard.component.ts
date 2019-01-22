@@ -15,4 +15,11 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * 
+   */
+  preview() {
+    window.open("http://localhost:4200/assets/pdf/web/viewer.html");
+  }
+
 }
