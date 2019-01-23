@@ -1,0 +1,1 @@
+ng g service my-service #生成service文件

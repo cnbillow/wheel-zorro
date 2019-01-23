@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { _HttpClient } from '@delon/theme';
 
+declare var jsPath;
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -16,10 +18,10 @@ export class DashboardComponent implements OnInit {
   }
 
   /**
-   * 
+   * 打开预览界面
    */
   preview() {
-    window.open("http://localhost:4200/assets/pdf/web/viewer.html");
+    window.open(jsPath + "assets/pdf/web/viewer.html");
   }
 
 }
