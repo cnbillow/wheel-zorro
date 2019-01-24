@@ -1,0 +1,24 @@
+<nz-list-item>
+  <nz-list-item-meta [nzTitle]="nzTitle" nzAvatar="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+    nzDescription="后台调用的是阿里的easyExcel">
+    <ng-template #nzTitle>
+      <a (click)="exportExcel()">导出Excel</a>
+    </ng-template>
+  </nz-list-item-meta>
+</nz-list-item>
+<nz-list-item>
+  <nz-list-item-meta [nzTitle]="nzTitle1" nzAvatar="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+    nzDescription="............">
+    <ng-template #nzTitle1>
+      <a (click)="downloadFile()">文件下载</a>
+    </ng-template>
+  </nz-list-item-meta>
+</nz-list-item>
+<nz-list-item>
+  <nz-list-item-meta [nzTitle]="nzTitle2" nzAvatar="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+    nzDescription="通过Google出品的pdf.js实现">
+    <ng-template #nzTitle2>
+      <a (click)="previewPdf()">文档在线预览</a>
+    </ng-template>
+  </nz-list-item-meta>
+</nz-list-item>

@@ -17,7 +17,7 @@ export class Config {
      */
     getInitHeaders(): HttpHeaders {
         return new HttpHeaders({
-            'x-Authentication-WorkManage': this.getUserId()
+            // 'x-Authentication-WorkManage': this.getUserId()
         });
     }
 

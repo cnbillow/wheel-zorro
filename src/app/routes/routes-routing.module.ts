@@ -15,6 +15,7 @@ import { UserRegisterResultComponent } from './passport/register-result/register
 // single pages
 import { CallbackComponent } from './callback/callback.component';
 import { UserLockComponent } from './passport/lock/lock.component';
+import { FunctionsComponent } from './functions/functions.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent, data: { title: '仪表盘' } },
+      { path: 'functions', component: FunctionsComponent, data: { title: '功能集' } },
+      { path: 'form', component: FunctionsComponent, data: { title: '功能集' } },
+      { path: 'page', component: FunctionsComponent, data: { title: '功能集' } },
+      { path: 'tree', component: FunctionsComponent, data: { title: '功能集' } },
       { path: 'exception', loadChildren: './exception/exception.module#ExceptionModule' },
       // 业务子模块
       // { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' }

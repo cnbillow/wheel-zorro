@@ -41,8 +41,8 @@ export class StartupService {
     ).pipe(
       // 接收其他拦截器后产生的异常消息
       catchError(([langData, appData]) => {
-          resolve(null);
-          return [langData, appData];
+        resolve(null);
+        return [langData, appData];
       })
     ).subscribe(([langData, appData]) => {
       // setting language data
@@ -62,12 +62,12 @@ export class StartupService {
       // 设置页面标题的后缀
       this.titleService.suffix = res.app.name;
     },
-    () => { },
-    () => {
-      resolve(null);
-    });
+      () => { },
+      () => {
+        resolve(null);
+      });
   }
-  
+
   private viaMockI18n(resolve: any, reject: any) {
     this.httpClient
       .get(`assets/tmp/i18n/${this.i18n.defaultLang}.json`)
@@ -78,7 +78,7 @@ export class StartupService {
         this.viaMock(resolve, reject);
       });
   }
-  
+
   private viaMock(resolve: any, reject: any) {
     // const tokenData = this.tokenService.get();
     // if (!tokenData.token) {
@@ -112,6 +112,22 @@ export class StartupService {
           {
             text: '仪表盘',
             link: '/dashboard',
+            icon: { type: 'icon', value: 'appstore' }
+          }, {
+            text: '小功能集',
+            link: '/functions',
+            icon: { type: 'icon', value: 'appstore' }
+          }, {
+            text: 'FORM表单',
+            link: '/form',
+            icon: { type: 'icon', value: 'appstore' }
+          }, {
+            text: '列表',
+            link: '/page',
+            icon: { type: 'icon', value: 'appstore' }
+          },{
+            text: '树',
+            link: '/tree',
             icon: { type: 'icon', value: 'appstore' }
           },
         ]

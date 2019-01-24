@@ -16,12 +16,4 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  /**
-   * 打开预览界面
-   */
-  preview() {
-    window.open(jsPath + "assets/pdf/web/viewer.html");
-  }
-
 }
