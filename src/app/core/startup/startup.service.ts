@@ -118,14 +118,10 @@ export class StartupService {
             link: '/functions',
             icon: { type: 'icon', value: 'appstore' }
           }, {
-            text: 'FORM表单',
-            link: '/form',
+            text: '增删改查',
+            link: '/data',
             icon: { type: 'icon', value: 'appstore' }
           }, {
-            text: '列表',
-            link: '/page',
-            icon: { type: 'icon', value: 'appstore' }
-          },{
             text: '树',
             link: '/tree',
             icon: { type: 'icon', value: 'appstore' }

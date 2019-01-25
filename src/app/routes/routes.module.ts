@@ -12,6 +12,8 @@ import { UserRegisterResultComponent } from './passport/register-result/register
 import { CallbackComponent } from './callback/callback.component';
 import { UserLockComponent } from './passport/lock/lock.component';
 import { FunctionsComponent } from './functions/functions.component';
+import { DataComponent } from './data/data.component';
+import { DataEditComponent } from './data/edit/data-edit.component';
 
 const COMPONENTS = [
   DashboardComponent,
@@ -23,15 +25,17 @@ const COMPONENTS = [
   CallbackComponent,
   UserLockComponent,
 ];
-const COMPONENTS_NOROUNT = [];
+const COMPONENTS_NOROUNT = [DataEditComponent];
 
 @NgModule({
-  imports: [ SharedModule, RouteRoutingModule ],
+  imports: [SharedModule, RouteRoutingModule],
   declarations: [
     ...COMPONENTS,
     ...COMPONENTS_NOROUNT,
-    FunctionsComponent
+    FunctionsComponent,
+    DataComponent,
+
   ],
   entryComponents: COMPONENTS_NOROUNT
 })
-export class RoutesModule {}
+export class RoutesModule { }
