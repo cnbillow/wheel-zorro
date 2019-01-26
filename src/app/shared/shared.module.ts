@@ -13,6 +13,7 @@ import { TranslateModule } from '@ngx-translate/core';
 // #region third libs
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { CountdownModule } from 'ngx-countdown';
+import { FileComponent } from './file/file.component';
 const THIRDMODULES = [
   NgZorroAntdModule,
   CountdownModule
@@ -20,7 +21,7 @@ const THIRDMODULES = [
 // #endregion
 
 // #region your componets & directives
-const COMPONENTS = [];
+const COMPONENTS = [FileComponent];
 const DIRECTIVES = [];
 // #endregion
 
@@ -39,7 +40,8 @@ const DIRECTIVES = [];
   declarations: [
     // your components
     ...COMPONENTS,
-    ...DIRECTIVES
+    ...DIRECTIVES,
+
   ],
   exports: [
     CommonModule,

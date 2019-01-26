@@ -182,7 +182,7 @@ export class DataComponent implements OnInit {
    * 查询
    */
   query() {
-    alert(JSON.stringify(this.queryInfo));
+    console.log(JSON.stringify(this.queryInfo));
   }
 
 }

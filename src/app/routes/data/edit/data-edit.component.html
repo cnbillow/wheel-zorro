@@ -1,4 +1,10 @@
-<form nz-form>
+<form nz-form (ngSubmit)="submit()">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="5">附件</nz-form-label>
+    <nz-form-control nzValidateStatus="error" [nzSpan]="12">
+      <my-file #fileComp [isMultiple]="isMultiple"></my-file>
+    </nz-form-control>
+  </nz-form-item>
   <nz-form-item>
     <nz-form-label [nzSpan]="5">Fail</nz-form-label>
     <nz-form-control nzValidateStatus="error" [nzSpan]="12">
@@ -73,6 +79,12 @@
     <nz-form-label [nzSpan]="5">Success</nz-form-label>
     <nz-form-control [nzSpan]="12" nzValidateStatus="success" nzHasFeedback>
       <nz-input-number name="inputnumber-success" style="width:100%"></nz-input-number>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzSpan]="24">
+      <button nz-button type="submit" nzType="primary">保存</button>
+      <button nz-button type="button" (click)="cancel()">取消</button>
     </nz-form-control>
   </nz-form-item>
 </form>

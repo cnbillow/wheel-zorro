@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { RestResponse } from '@core/models/rest-response';
 import { HttpParams } from '@angular/common/http';
 import { Config } from '@core/utils/config';
+import { UploadFile } from 'ng-zorro-antd';
 
 @Injectable({
   providedIn: 'root'
@@ -18,4 +19,20 @@ export class DataService {
     let headers = { headers: this.config.getInitHeaders() }
     return this.httpService.get(url, { headers: headers, params });
   }
+
+  /**
+   * 新建表单
+   * @param files 
+   */
+  create(files?: any[]) {
+    let url = "file/uploadFile";
+    let formData = new FormData();
+    if (!!files) {
+      for (let i = 0; i < files.length; i++) {
+        formData.append(`file${i}`, files[i]);
+      }
+    }
+    return this.httpService.post(url, formData, { responseType: 'text' });
+  }
+
 }
